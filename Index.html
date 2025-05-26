@@ -37,7 +37,7 @@
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
 
-        /* Botões de Acessibilidade */
+        /* Barra de Acessibilidade */
         .accessibility-bar {
             position: fixed;
             top: 20px;
@@ -47,7 +47,7 @@
             z-index: 1000;
         }
 
-        .accessibility-btn {
+        .access-btn {
             background-color: var(--primary-color);
             color: white;
             border: none;
@@ -59,28 +59,30 @@
             align-items: center;
             justify-content: center;
             font-size: 16px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
         }
 
-        /* Ícones de Contato */
-        .contact-bar {
+        /* Rodapé com contatos */
+        .contact-footer {
             background-color: var(--secondary-color);
-            padding: 15px 0;
+            padding: 20px 0;
             text-align: center;
-            margin-top: 30px;
+            margin-top: 40px;
         }
 
         .contact-icons {
-            display: inline-flex;
-            gap: 25px;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
         }
 
-        .contact-icon {
+        .contact-link {
             color: white;
             font-size: 24px;
             transition: transform 0.3s;
         }
 
-        .contact-icon:hover {
+        .contact-link:hover {
             transform: scale(1.1);
         }
     </style>
@@ -88,32 +90,111 @@
 <body class="light-mode">
     <!-- Barra de Acessibilidade -->
     <div class="accessibility-bar">
-        <button class="accessibility-btn" onclick="increaseFont()" title="Aumentar fonte">A+</button>
-        <button class="accessibility-btn" onclick="decreaseFont()" title="Diminuir fonte">A-</button>
-        <button class="accessibility-btn" onclick="toggleContrast()" title="Alto contraste">C</button>
+        <button class="access-btn" onclick="increaseFont()" title="Aumentar fonte">A+</button>
+        <button class="access-btn" onclick="decreaseFont()" title="Diminuir fonte">A-</button>
+        <button class="access-btn" onclick="toggleContrast()" title="Alto contraste">C</button>
     </div>
 
     <main>
-        <!-- Seções existentes permanecem iguais -->
+        <!-- Seções existentes permanecem exatamente as mesmas -->
+        <!-- Seção de Softwares -->
+        <section id="softwares" class="section">
+            <div class="section-header">
+                <h2>💻 Softwares no Agro</h2>
+            </div>
+            <p>Ferramentas digitais que revolucionam a gestão agrícola, análise de dados e tomada de decisão.</p>
+            
+            <img src="https://media.istockphoto.com/id/2095629614/pt/foto/agriculture-technology-and-smart-farming-farmer-uses-applications-for-the-analysis-data-to.jpg?s=612x612&w=is&k=20&c=2rQ3_m-hkd2cer0MSmepm9RLNCbN7PDr1hgihf2lK0A=" alt="Dashboard de gestão agrícola">
+            
+            <div class="card-container">
+                <div class="card">
+                    <h3>📊 Gestão Agrícola</h3>
+                    <ul>
+                        <li><strong>AgroEasy</strong> - Controle de produção e custos</li>
+                        <li><strong>Farmbox</strong> - Planejamento de safras</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Hardware -->
+        <section id="hardware" class="section">
+            <div class="section-header">
+                <h2>🖥️ Hardware no Agro</h2>
+            </div>
+            <p>Dispositivos e equipamentos que trazem automação e precisão para o campo.</p>
+            
+            <img src="https://media.istockphoto.com/id/487521385/pt/foto/a-tecnologia-verde-imagem-stock.jpg?s=612x612&w=is&k=20&c=GBS81o1nECLli4Tncm5VsGgBBlofABwPXoquPImwB-M=" alt="Drone agrícola em ação">
+            
+            <div class="card-container">
+                <div class="card">
+                    <h3>🚜 Máquinas Inteligentes</h3>
+                    <ul>
+                        <li><strong>Tratores autônomos</strong> (Case IH, New Holland)</li>
+                        <li><strong>Colheitadeiras com GPS</strong></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Robótica -->
+        <section id="robotica" class="section">
+            <div class="section-header">
+                <h2>🤖 Sistemas de Robótica no Agro</h2>
+            </div>
+            <p>Automação avançada para colheita, plantio e monitoramento de cultivos.</p>
+            
+            <img src="https://media.istockphoto.com/id/1447011226/pt/foto/hydroponic-robot-farming.jpg?s=612x612&w=is&k=20&c=8Uk1dQTFiUI3OofNgV_ANFiXNQJZHKlKO9kY6GFKQjw=" alt="Robô agrícola em plantação">
+            
+            <div class="card-container">
+                <div class="card">
+                    <h3>🌱 Robôs Agrícolas</h3>
+                    <ul>
+                        <li><strong>AgBot</strong> - Plantio e capina automatizados</li>
+                        <li><strong>Harvest CROO</strong> - Colheita de morangos</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Aplicativos -->
+        <section id="apps" class="section">
+            <div class="section-header">
+                <h2>📱 Aplicativos para o Agro</h2>
+            </div>
+            <p>Soluções móveis para gestão no campo, vendas e assistência técnica.</p>
+            
+            <img src="https://media.istockphoto.com/id/1328823438/pt/foto/smart-farming-digital-technology-agriculture-app.jpg?s=612x612&w=is&k=20&c=KfNYl7MxgcTD3oSCEiPo1cPfnMpFLVyL00Jiv29Tq4o=" alt="Celular com aplicativos agrícolas">
+            
+            <div class="card-container">
+                <div class="card">
+                    <h3>📲 Gestão no Bolso</h3>
+                    <ul>
+                        <li><strong>AgroPro</strong> - Controle de insumos</li>
+                        <li><strong>AgroClima</strong> - Previsão do tempo</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <!-- Barra de Contatos -->
-    <div class="contact-bar">
+    <!-- Rodapé com ícones de contato -->
+    <footer class="contact-footer">
         <div class="contact-icons">
-            <a href="https://instagram.com/seuinstagram" class="contact-icon" target="_blank" title="Instagram">
+            <a href="https://instagram.com/seuinstagram" class="contact-link" target="_blank" title="Instagram">
                 <i class="fab fa-instagram"></i>
             </a>
-            <a href="https://wa.me/5511999999999" class="contact-icon" target="_blank" title="WhatsApp">
+            <a href="https://wa.me/5511999999999" class="contact-link" target="_blank" title="WhatsApp">
                 <i class="fab fa-whatsapp"></i>
             </a>
-            <a href="mailto:seuemail@exemplo.com" class="contact-icon" title="E-mail">
+            <a href="mailto:seuemail@exemplo.com" class="contact-link" title="E-mail">
                 <i class="fas fa-envelope"></i>
             </a>
         </div>
-    </div>
+    </footer>
 
     <script>
-        // Funções de Acessibilidade
+        // Funções de acessibilidade
         function increaseFont() {
             const currentSize = parseFloat(getComputedStyle(document.body).fontSize);
             document.body.style.fontSize = (currentSize * 1.1) + 'px';
